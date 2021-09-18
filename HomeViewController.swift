@@ -8,12 +8,34 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    //MARK: - Properties
+    
+    
+    //MARK: - Outlets
+    @IBOutlet weak var welcomeView: UIView!
+    @IBOutlet weak var starGameButton: UIButton!
+    
+    //MARK: - Actions
+  
+    @IBAction func starGameButton(_ sender: Any) {
+    }
+    
+    //MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        welcomeViewCornerRadius()
+        starGameButtonCornerRadius()
+        title = "Perguntas e respostas"
+        navigationController?.navigationBar.barTintColor = UIColor.init(red: 94/255, green: 130/255, blue: 249/255, alpha: 1)
     }
+    //MARK: - Methods
+   func welcomeViewCornerRadius() {welcomeView.layer.cornerRadius = 40    }
+    func starGameButtonCornerRadius() {starGameButton.layer.cornerRadius = 35    }
+    
+    
+        
+       
+    
 
 
     /*
@@ -25,5 +47,6 @@ class HomeViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
 
 }
